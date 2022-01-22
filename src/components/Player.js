@@ -8,6 +8,7 @@ const Player = ({ item, playerType, onDropPlayer, index }) => {
     item: () => ({ ...item, index }),
     end: (item, monitor) => {
       const dropResult = monitor.getDropResult();
+      //moveと出力される。dropしなければnull console.log("dropResult:",dropResult)
 
       if (item && dropResult) {
         onDropPlayer(item);
